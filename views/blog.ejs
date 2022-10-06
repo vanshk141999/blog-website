@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>   
+
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">BLOG</h1>
+    </div>
+
+    <!-- Prints Posts -->
+    <% posts.forEach(function(post){ %>
+    <h3><a style="text-decoration: none; color: #19BC9B;" href="/blog/<%=post.title%>"><%= post.title %></a></h3>
+    <p><%= post.date %> </p>
+    <p><%= post.content.substring(0, 100) %></p>
+    <% }); %>
+
+<%- include('partials/footer'); -%>
